@@ -1,5 +1,5 @@
 {
-    "name": "xing.chen/push",
+    "name": "xiaokus/getui",
     "description": "支持友盟、信鸽、个推推送。工厂模式，使用接口规范",
     "license": "MIT",
     "authors": [
