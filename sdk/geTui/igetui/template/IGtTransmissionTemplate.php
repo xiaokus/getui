@@ -2,6 +2,11 @@
 
 namespace xing\push\sdk\geTui\igetui\template;
 
+use xing\push\sdk\geTui\igetui\ActionChain;
+use xing\push\sdk\geTui\igetui\ActionChain_Type;
+use xing\push\sdk\geTui\igetui\AppStartUp;
+use xing\push\sdk\geTui\igetui\NotifyInfo;
+
 class IGtTransmissionTemplate extends IGtBaseTemplate {
 
 	var $transmissionType;
@@ -64,7 +69,7 @@ class IGtTransmissionTemplate extends IGtBaseTemplate {
 
     function set3rdNotifyInfo($notify) {
         if ($notify->get_title() == null || $notify -> get_content() == null) {
-            throw new Exception("notify title or content cannot be null");
+            throw new \Exception("notify title or content cannot be null");
         }
 
         $notifyInfo = new NotifyInfo();

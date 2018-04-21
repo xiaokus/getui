@@ -10,11 +10,11 @@ namespace xing\push\drive;
 
 use xing\push\sdk\geTui\IGeTui;
 use xing\push\sdk\geTui\igetui\IGtAppMessage;
-use xing\push\sdk\geTui\igetui\IGtAPNPayload;
 use xing\push\sdk\geTui\igetui\template\IGtNotificationTemplate;
 use xing\push\sdk\geTui\igetui\IGtSingleMessage;
 use xing\push\sdk\geTui\igetui\IGtTarget;
 use xing\push\sdk\geTui\igetui\template\IGtTransmissionTemplate;
+
 class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\PushInterface
 {
 
@@ -189,7 +189,7 @@ class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\P
             $template->set_appId($this->AppID);                   //应用appid
             $template->set_appkey($this->AppKey);                 //应用appkey
             $extendData = json_encode($this->extendedData);
-            $template->set_transmissionType(1);//透传消息类型
+            $template->set_transmissionType(2);//透传消息类型
             $template->set_transmissionContent($extendData);//透传内容
             return $template;
         }else{
@@ -200,8 +200,6 @@ class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\P
             $template->set_transmissionContent("测试离线");//透传内容
             $template->set_title($this->title);      //通知栏标题
             $template->set_text($this->body);     //通知栏内容
-//        $template->set_logo("");                       //通知栏logo
-//        $template->set_logoURL("");                    //通知栏logo链接
             $template->set_isRing(true);                   //是否响铃
             $template->set_isVibrate(true);                //是否震动
             $template->set_isClearable(true);              //通知栏是否可清除$template->set_transmissionType(1);//透传消息类型
@@ -216,7 +214,4 @@ class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\P
         }
 
     }
-
-   
-
 }
