@@ -189,7 +189,7 @@ class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\P
             $template->set_appId($this->AppID);                   //应用appid
             $template->set_appkey($this->AppKey);                 //应用appkey
             $extendData = json_encode($this->extendedData);
-            $template->set_transmissionType(2);//透传消息类型
+            $template->set_transmissionType(233);//透传消息类型
             $template->set_transmissionContent($extendData);//透传内容
             return $template;
         }else{
