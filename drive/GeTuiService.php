@@ -23,7 +23,7 @@ class GeTuiService extends \xing\push\core\BasePush implements \xing\push\core\P
     protected $AppSecret;
     protected $AppKey;
     protected $MasterSecret;
-    const HOST = 'http://sdk.open.api.igexin.com/apiex.htm';
+    const HOST = 'https://api.getui.com/apiex.htm';
     protected $result;
 
     /**
